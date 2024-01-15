@@ -17,8 +17,8 @@ public class P2178_미로탐색{
         StringTokenizer st = new StringTokenizer(br.readLine());
         n = Integer.parseInt(st.nextToken());
         m = Integer.parseInt(st.nextToken());
-        A = new int[n][n];
-        visited = new boolean[n][n];
+        A = new int[n][m];
+        visited = new boolean[n][m];
 
         for(int i = 0; i < n; i++){
 
