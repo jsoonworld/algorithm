@@ -1,4 +1,4 @@
-package DS.numberTheory;
+package DS.numberTheory.primenumber;
 
 
 import java.util.*;
