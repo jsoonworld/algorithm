@@ -20,7 +20,7 @@ public class P21568_AxByC {
         } else {
             int mok = (int) (c / gcd);
             long[] ret = Excute(a, b);
-            System.out.println(ret[0] * mok + " " + ret[i] * mok);
+            System.out.println(ret[0] * mok + " " + ret[1] * mok);
         }
     }
 
