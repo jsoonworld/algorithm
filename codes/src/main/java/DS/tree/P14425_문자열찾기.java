@@ -9,7 +9,9 @@ public class P14425_문자열찾기 {
         int n = sc.nextInt();
         int m = sc.nextInt();
         tNode root = new tNode();
-        while (n > 0) {
+
+        // 단어 삽입 부분
+        for (int j = 0; j < n; j++) {
             String text = sc.next();
             tNode now = root;
             for (int i = 0; i < text.length(); i++) {
@@ -18,33 +20,35 @@ public class P14425_문자열찾기 {
                     now.next[c - 'a'] = new tNode();
                 }
                 now = now.next[c - 'a'];
-                if (i == text.length() - 1) {
-                    now.isEnd = true;
-                }
-                n--;
             }
-            int count = 0;
-            while (m > 0) {
-                String text = sc.next();
-                tNode now = root;
-                for (int i = 0; i < text.length(); i++) {
-                    char c = text.charAt(i);
-                    if (now.next[c - 'a'] == null) {
-                        break;
-                    }
-                    now = now.next[c - 'a'];
-                    if (i == text.length() - 1 && now.isEnd) {
-                        count++;
-                    }
-                    m--;
+            now.isEnd = true; // 단어의 끝을 표시
+        }
+
+        int count = 0;
+
+        // 문자열 검색 부분
+        for (int j = 0; j < m; j++) {
+            String text = sc.next();
+            tNode now = root;
+            boolean isMatch = true;
+            for (int i = 0; i < text.length(); i++) {
+                char c = text.charAt(i);
+                if (now.next[c - 'a'] == null) {
+                    isMatch = false;
+                    break;
                 }
-                System.out.println(count);
+                now = now.next[c - 'a'];
+            }
+            if (isMatch && now.isEnd) {
+                count++;
             }
         }
+
+        System.out.println(count);
     }
 }
 
-class tNode{
+class tNode {
     tNode[] next = new tNode[26];
     boolean isEnd;
 }
