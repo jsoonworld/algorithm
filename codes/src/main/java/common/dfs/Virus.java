@@ -13,7 +13,7 @@ public class Virus {
         visited[index] = true;
         for (int i = 1; i <= n; i++) {
             if (!visited[i] && graph[index][i]) {
-                dfs(i); 
+                dfs(i);
             }
         }
     }
