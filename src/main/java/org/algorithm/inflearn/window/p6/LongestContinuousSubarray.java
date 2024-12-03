@@ -1,4 +1,4 @@
-package org.algorithm.window.p6;
+package org.algorithm.inflearn.window.p6;
 
 import java.util.Scanner;
 

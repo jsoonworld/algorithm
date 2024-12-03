@@ -1,4 +1,4 @@
-package org.algorithm.window.p4;
+package org.algorithm.inflearn.window.p4;
 
 import java.util.Scanner;
 
