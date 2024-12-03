@@ -1,4 +1,4 @@
-package org.algorithm.inflearn.map;
+package org.algorithm.inflearn.map.p1;
 
 import java.util.HashMap;
 import java.util.Map;
