@@ -10,7 +10,7 @@ public class Anagram {
         String str1 = sc.next();
         String str2 = sc.next();
 
-        System.out.println(isAnagram(str1, str2) ? "YES" : " NO");
+        System.out.println(isAnagram(str1, str2) ? "YES" : "NO");
 
     }
 
